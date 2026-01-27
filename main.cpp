@@ -3370,7 +3370,7 @@ WinMain(HINSTANCE instance,
         }
         */
 
-        if (moving == true)
+        if (moving)
         {
             /*
             campos.x+=movespeed*sin(angley*PI/180)*cos(anglex*PI/180)*dt;
@@ -3380,7 +3380,7 @@ WinMain(HINSTANCE instance,
             campos.x += movespeed * sin(angley * PI / 180) * dt;
             campos.z += movespeed * cos(angley * PI / 180) * dt;
         }
-        if (backmoving == true)
+        if (backmoving)
         {
             /*
             campos.x-=movespeed*sin(angley*PI/180)*cos(anglex*PI/180)*dt;
@@ -3391,20 +3391,20 @@ WinMain(HINSTANCE instance,
             campos.z -= movespeed * cos(angley * PI / 180) * dt;
         }
 
-        if (rightmov == true)
+        if (rightmov)
         {
 
             campos.x += movespeed * cos(angley * PI / 180) * dt;
             campos.z -= movespeed * sin(angley * PI / 180) * dt;
         }
 
-        if (leftmov == true)
+        if (leftmov)
         {
             campos.x -= movespeed * cos(angley * PI / 180) * dt;
             campos.z += movespeed * sin(angley * PI / 180) * dt;
         }
 
-        if (readonce == false)
+        if (!readonce)
         {
             image1.filename = "texture2.jpg";
             image1.success = load_image_lin(image1.image, image1.filename, image1.imagewidth, image1.imageheight);
