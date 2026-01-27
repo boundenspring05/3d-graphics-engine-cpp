@@ -1088,12 +1088,8 @@ void draw2dtriangledown(coordinate a, coordinate b, coordinate c, int winwidth, 
             minx = tri[i].x;
         }
     }
-    if (tri[maxyi].y - tri[minyi].y < 2 || tri[maxxi].x - tri[minxi].x < 2)
+    if (tri[maxyi].y - tri[minyi].y >= 2 && tri[maxxi].x - tri[minxi].x >= 2)
     {
-    }
-    else
-    {
-
         int mediumyi = 3 - (minyi + maxyi);
         int mediumy = tri[mediumyi].y;
         bool achanged = false;
